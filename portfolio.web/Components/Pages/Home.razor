@@ -1,0 +1,437 @@
+﻿@page "/"
+
+@using System.Net.Http.Headers
+
+@rendermode InteractiveServer
+@layout portfolio.web.Components.Layout.PlainLayout
+
+<main>
+    <!-- top navigation-->
+    <nav id="kz-topnav" class="kz-topnav navbar navbar-expand-lg bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/user-briefcase.png" alt="Benard Kimani" width="30" height="30" weight="30"
+                    class="kz-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kz-details">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kz-work-exp">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kz-projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kz-hire-sect">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end top navigation -->
+
+    <!-- hero section -->
+    <div id="kz-hero" class="kz-hero px-4 py-5 pb-0 my-5 text-center">
+        <div class="row">
+            <div class="col-md-2 mb-2">
+                <ul class="kz-socials-menu d-flex flex-sm-row flex-md-column flex-lg-column justify-content-around">
+                    <li class="d-flex align-items-center justify-content-around py-2">
+                        <a class="icon-link icon-link-hover" href="#kz-hire-sect">
+                            <i class="fas fa-rocket"></i>
+                        </a>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-around py-2">
+                        <a class="icon-link icon-link-hover" href="https://github.com/benkimz">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-around py-2">
+                        <a class="icon-link icon-link-hover" href="https://www.linkedin.com/in/benkimz">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-around py-2">
+                        <a class="icon-link icon-link-hover" href="https://developers.google.com/profile/u/benkimz">
+                            <i class="fa-brands fa-google"></i>
+                        </a>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-around py-2">
+                        <a class="icon-link icon-link-hover" href="https://twitter.com/benkimz_">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-around py-2">
+                        <a class="icon-link icon-link-hover" href="https://huggingface.co/benkimz">
+                            <i class="fa-regular fa-face-smile-beam"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <img class="kz-hero-img d-block mx-auto mb-4 img-fluid" src="assets/images/sq-dev.jpg"
+                    alt="An image of Benard">
+                <h3 class="display-6">Benard Kimani</h3>
+                <div class="col-lg-6 mx-auto">
+                    <p class="lead mb-4">Welcome to my digital realm! I am a passionate developer specializing in <span
+                            class="badge rounded-pill bg-secondary">Machine Learning</span>, <span
+                            class="badge rounded-pill bg-secondary">Data Science</span>, <span
+                            class="badge rounded-pill bg-secondary">Python</span>, and
+                        <span class="badge rounded-pill bg-secondary">.NET</span>. With a keen eye for precision and a
+                        knack for
+                        innovation, I bring ideas to life through the art of coding.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end hero section -->
+
+    <!-- details: (location, education, & expertise) section -->
+    <div id="kz-details" class="kz-details container px-4 my-5">
+        <div class="row g-4 row-cols-1 row-cols-lg-3">
+            <div class="kz-details-sect col d-flex align-items-start">
+                <div class="icon-square flex-shrink-0 me-3">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h3 class="border-bottom">Education</h3>
+                    <p>
+                        <strong>B-Eng:</strong><span class="badge bg-secondary">Electrical and Electronics
+                            Engineering</span> <a href="https://www.mu.ac.ke">Moi University, Main Campus, Eldoret</a>
+                        <br><br>
+                        <strong>Expected graduation:</strong> <span class="badge bg-secondary">2025</span> <br><br>
+                        My education has not only developed my technical skills but also fostered my problem-solving
+                        abilities, attention to
+                        detail, and teamwork skills. I am excited to bring these skills to future opportunities.
+                    </p>
+                </div>
+            </div>
+            <div class="kz-details-sect col d-flex align-items-start">
+                <div class="icon-square flex-shrink-0 me-3">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div>
+                    <h3 class="border-bottom">Skills</h3>
+                    <ul class="d-flex p-0" style="list-style-type: none;">
+                        <li>
+                            <ul class="p-0 m-2" style="list-style-type: none;">
+                                <li>Python</li>
+                                <li>Data Science</li>
+                                <li>SQL</li>
+                                <li>Machine Learning</li>
+                                <li>Deep Learning</li>
+                                <li>Transformers</li>
+                                <li class="border-bottom">LLMs & NLP</li><br>
+                                <li>ASP.NET Core</li>
+                                <li>JavaScript</li>
+                                <li>Flutter - Dart</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="p-0 m-2" style="list-style-type: none;">
+                                <li>Cloud</li>
+                                <li>Digital Systems Design</li>
+                                <li>Circuit Analysis</li>
+                                <li class="border-bottom">Control Systems</li><br>
+                                <li>Problem Solving</li>
+                                <li>Teamwork</li>
+                                <li>Communication</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="kz-details-sect col d-flex align-items-start">
+                <div class="icon-square flex-shrink-0 me-3">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h3 class="border-bottom">Current Location</h3>
+                    <p>
+                        Open to <span class="badge bg-secondary">Remote</span> and <span
+                            class="badge bg-secondary">Hybrid</span> opportunities. <br><br>
+                        <strong>Active location:</strong> <span class="badge bg-secondary">Eldoret, Kenya</span> <br />
+
+                        I am open to relocation and excited to bring my skills to new opportunities. I am also open to
+                        remote and hybrid. <br><br>
+                        Home location: <span class="badge bg-secondary">Nyeri, Kenya</span> <br><br>
+                        Other locations: <span class="badge bg-secondary">Nairobi, Kenya</span> ... among others.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end details: (location, education, & expertise) section -->
+
+    <!-- work and experience -->
+    <div id="kz-work-exp" class="kz-section-title container" style="text-align: center;">
+        <h1 class="border-bottom">
+            <i class="fa fa-tasks" aria-hidden="true"></i> Work and Experience
+        </h1>
+    </div>
+    <div class="kz-work-exp container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <ul class="d-flex align-items-center justify-content-around" style="list-style-type: none;">
+                    <li>
+                        <h3>Websites: </h3>
+                        <ul>
+                            <li>
+                                <a href="https://applantus.com/">Applantus Website</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="assets/images/applantus.jpg" class="d-block mx-lg-auto img-fluid"
+                            alt="Bootstrap Themes" width="300" height="300" loading="lazy">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="display-7 lh-1 mb-3">Back-End Developer: Applantus<span class="badge"
+                        style="background: #30c31e!important;">Active-Role</span></h3>
+                <p class="lead">
+                    As a Back End Engineer at Applantus, I develop scalable and reliable solutions for web and mobile
+                    applications, using
+                    various technologies and tools such as ASP.NET Core, JavaScript, Python, SQL, Flutter, and Azure
+                    Cloud. I enjoy collaborating with a talented team of other developers.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="kz-work-exp container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <ul class="d-flex align-items-center justify-content-around" style="list-style-type: none;">
+                    <li>
+                        <h3>Developer Profile & Websites</h3>
+                        <ul>
+                            <li>
+                                <a href="https://gdsc.community.dev/moi-university/">GDSC Moi University</a>
+                            </li>
+                            <li>
+                                <a href="https://developers.google.com/profile/u/benkimz">Developer Profile</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="assets/images/gdsc_moi_logo.jpeg" class="d-block mx-lg-auto img-fluid"
+                            alt="Bootstrap Themes" width="100" height="100" loading="lazy">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="display-7 lh-1 mb-3">Vice Lead: Google Developer Student Club Moi <span class="badge">2023 -
+                        2024</span></h3>
+                <p class="lead">
+                    This position allowed me to develop my leadership skills, teamwork, and communication. I have also
+                    been able to develop my technical skills through the various projects and events we have organized.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="kz-work-exp container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <ul class="d-flex align-items-center justify-content-around" style="list-style-type: none;">
+                    <li>
+                        <h3>Websites</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.ieee.org/">IEEE</a>
+                            </li>
+                            <li><a href="https://www.computer.org/">IEEE CS</a></li>
+                            <li><a href="https://ieee-cas.org/">IEEE CAS</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="assets/images/ieee_logo_140yrs.png" class="d-block mx-lg-auto img-fluid"
+                            alt="Bootstrap Themes" height="250" loading="lazy">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="display-7 lh-1 mb-3">Secretary: IEEE Moi University Student Branch <span class="badge">2023 -
+                        2024</span></h3>
+                <p class="lead">
+                    This position allowed me to discover a passion for innovation and technology. I encounter colleagues
+                    who challenge me and help me grow. Moreover, I have been able to connect with others whom we share a
+                    passion and a desire to make a difference. <br>
+                <h3 class="border-bottom">My IEEE Societies</h3>
+                <ul>
+                    <li>Circuits and Systems Society</li>
+                    <li>Computer Society</li>
+                    <li>Photonics Society</li>
+                    <li>Communications Society</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- end work and experience-->
+
+    <!-- projects section -->
+    <div id="kz-projects" class="kz-section-title container" style="text-align: center;">
+        <h1 class="border-bottom">
+            <i class="fas fa-project-diagram"></i> Projects and DIY Delights
+        </h1>
+    </div>
+    <div class="kz-project-cards container d-flex flex-wrap align-items-center justify-content-around my-5 px-4 py-2">
+        <div class="kz-project-card">
+            <img src="assets/images/ai.jpg" alt="Product 2">
+            <h3>Yields Prediction AI</h3>
+            <p>
+                A machine learning model to predict crop yields in Sub-Saharan Africa. The model is built using
+                TensorFlow and the Keras API.
+            </p>
+            <div class="kz-link-tag">
+                <a href="https://app-ai.streamlit.app/">
+                    <i class="fas fa-paperclip"></i> Open
+                </a><br>
+                <a href="https://github.com/benkimz/production-ai">
+                    <i class="fa-brands fa-github"></i> Github
+                </a>
+            </div>
+        </div>
+        <div class="kz-project-card">
+            <img src="assets/images/emotions-model.jpg" alt="Product 1">
+            <h3>Emotion Detection Model</h3>
+            <p>
+                As part of my deep learning venture, I built a model that detects emotions from text. The model is built
+                using TensorFlow and the Keras API. <a href="https://huggingface.co/benkimz/emotions-model"
+                    style="color: #08fb4b!important;">Open on huggingface</a>
+            </p>
+            <div class="kz-link-tag">
+                <a href="https://github.com/benkimz/Emotion-Detection-Model">
+                    <i class="fa-brands fa-github"></i> Open
+                </a>
+            </div>
+        </div>
+
+        <div class="kz-project-card">
+            <img src="assets/images/bot.jpg" alt="Product 3">
+            <h3>Crypto Trading Bot</h3>
+            <p>
+                A crypto trading bot that uses machine learning to predict the price of cryptocurrencies. The bot is
+                built using Python and the Binance API.
+            </p>
+            <div class="kz-link-tag">
+                <a href="https://github.com/benkimz/ml-trading-bot">
+                    <i class="fa-brands fa-github"></i> Open
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- update notice -->
+    <div class="kz-section-title container" style="text-align: center;">
+        <h4 class="border-bottom">
+            <i class="fas fa-project-diagram"></i> ...I'll be updating the projects section soon, to include my other
+            projects. Checkout my github:
+            <a href="https://github.com/benkimz" style="text-decoration: none;">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </h4>
+    </div>
+    <!-- end projects section -->
+
+    <!-- contact/ hire section -->
+    <div id="kz-hire-sect" class="kz-section-title container my-5" style="text-align: center;">
+        <h3 class="border-bottom">
+            <i class="fas fa-rocket"></i> Contact or Hire Me
+        </h3>
+    </div>
+    <div class="kz-hire-sect container col-xl-10 col-xxl-8 px-4 my-5 mt-0">
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="kz-themify col-lg-7 text-center text-lg-start">
+                <h3 class="display-6 lh-1 mb-3">Shoot me an email:</h3>
+                <p class="col-lg-10 fs-4">
+                    Let's connect and make it happen.
+                </p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5">
+                <form class="kz-contact-form p-4 p-md-5 border rounded-3">
+                    <div class="text-light py-4 px-2">@StatusMessage</div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com"
+                            @bind-value="Email" @bind-value:event="oninput">
+                        <label for="email" class="text-primary">Share email</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Enter your message:</label>
+                        <textarea class="form-control" id="message" rows="5"
+                            placeholder="Write me a message and I will get back to you via email ..."
+                            @bind-value="Message" @bind-value:event="oninput"></textarea>
+                    </div>
+                    <button class="w-100 btn btn-lg" type="button" @onclick="@(() => SendEmail())">Send Message</button>
+                    <hr class="my-4">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- start footer section -->
+    <footer id="kz-footer" class="kz-footer footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span>@(DateTime.UtcNow.Year) Copy Right @((MarkupString)("&commat;")) Benard Kimani</span>
+            <a href="#kz-topnav"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+    <!-- end footer section -->
+
+</main>
+
+
+@code {
+    private string? Email { get; set; }
+    private string? Message { get; set; }
+
+    private string? StatusMessage { get; set; }
+    private async void SendEmail()
+    {
+        var domain = Environment.GetEnvironmentVariable("MAILGUN_DOMAIN");
+        var baseUri = $"https://api.eu.mailgun.net/v3/{domain}/messages";
+        var apiKey = Environment.GetEnvironmentVariable("MAILGUN_API_KEY");
+
+        var from = $"Portfolio Website: <portfolio.web@{domain}>";
+        var to = Environment.GetEnvironmentVariable("MAILGUN_TO_EMAIL");
+        var subject = "New Message from Portfolio Website";
+
+        var body = $@"<html><body><h3>Shared Client Email: {Email}</h3><p>Message: {Message}</p></body></html>";
+
+        if (to == null || apiKey == null || domain == null) return;
+
+        var client = new HttpClient();
+        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
+        Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes($"api:{apiKey}")));
+        using var formData = new MultipartFormDataContent();
+        formData.Add(new StringContent(from), "from");
+        formData.Add(new StringContent(to), "to");
+        formData.Add(new StringContent(subject), "subject");
+        formData.Add(new StringContent(body), "html");
+
+        var response = await client.PostAsync(baseUri, formData);
+
+        if (response.IsSuccessStatusCode)
+        {
+            StatusMessage = "Email sent successfully!";
+            Email = null; Message = null;
+        }
+        else
+        {
+            StatusMessage = "Failed to send email!";
+        }
+        StateHasChanged();
+    }
+
+}
